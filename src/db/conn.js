@@ -1,7 +1,7 @@
 import mysql from 'mysql';
 
 const host = 'localhost'
-const password = 'cGNjJF8jc3VwZXJhZG0'
+const password = 'YXB0XzE4Mjlfc3VwZXIkLg=='
 const user = 'cGNjJF8jc3VwZXJhZG0'
 const database = 'cGNjX2Ri'
 
