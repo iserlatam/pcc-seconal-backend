@@ -1,6 +1,6 @@
 import mysql from 'mysql';
 
-const host = 'p3plmcpnl499068.prod.phx3.secureserver.net'
+const host = 'localhost'
 const password = 'cGNjJF8jc3VwZXJhZG0'
 const user = 'cGNjJF8jc3VwZXJhZG0'
 const database = 'cGNjX2Ri'
