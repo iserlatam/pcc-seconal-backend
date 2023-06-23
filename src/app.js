@@ -1,11 +1,9 @@
 import express from 'express';
 import cors from 'cors';
-import morgan from 'morgan';
 import dotenv from 'dotenv';
 import compression from 'compression'
 
 import authRoutes from './api/routes/auth.routes.js'
-import usersRoutes from './api/routes/users.routes.js'
 import certificadosRoutes from './api/routes/certificados.routes.js'
 
 // DOTENV
