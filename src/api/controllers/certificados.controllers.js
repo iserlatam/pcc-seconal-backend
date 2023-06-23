@@ -5,9 +5,6 @@ export const obtenerCertificados = (req, res) => {
   try {
     connection.query('SELECT * FROM certificados', (err, results) => {
       if (err) throw err;
-
-      console.dir(results.length);
-
       res.json(results);
     });
   } catch (e) {
@@ -57,7 +54,7 @@ export const crearCertificado = (req, res) => {
       codigo_certificado,
     } = req.body;
 
-    const docFixed = tipo_doc.toLowerCase()
+    const docFixed = tipo_doc.toLowerCase();
 
     connection.query(
       `INSERT INTO certificados (
@@ -112,11 +109,9 @@ export const actualizarCertificado = (req, res) => {
     } = req.body;
 
     if (codigo_certificado.length >= 11) {
-      res
-        .status(400)
-        .send({
-          message: "Demasiados caracteres para el campo 'codigo_certificado'",
-        });
+      res.status(400).send({
+        message: "Demasiados caracteres para el campo 'codigo_certificado'",
+      });
     } else {
       // TAREA PENDIENTE: VERIFICAR EL ID DEL CERTIFICADO ANTES DE HACER LA ACCION Y
       connection.query(
@@ -184,9 +179,6 @@ export const actualizarCertificado = (req, res) => {
 export const eliminarCertificado = (req, res) => {
   try {
     const { id } = req.params;
-    // TAREA PENDIENTE: VERIFICAR EL DOCUMENTO ANTES DE HACER LA ACCION :: COMPLETADO
-    // TAREA COMPLETADA --------------------------------------------------
-
     connection.query(
       'SELECT * FROM certificados WHERE id = ?',
       [id],
