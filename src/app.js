@@ -13,7 +13,7 @@ dotenv.config()
 const app = express();
 
 // MIDDLEWARES
-app.use(cors());
+app.use(cors({ origin: process.env.REMOTE_CLIENT_APP, credentials: true }));
 app.use(express.json())
 app.use(compression())
 
